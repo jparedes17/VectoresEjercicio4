@@ -124,7 +124,7 @@ public class Frame4 extends javax.swing.JFrame {
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 230, 190));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 650, 457));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 457));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -199,14 +199,21 @@ public class Frame4 extends javax.swing.JFrame {
         {            
             for (int j = i+1; j < v.length; j++) 
             {
-               if (v[i]!=(i+1)) 
+               if (v[i]==(v[j])) 
                {
                     cont++;
+                    v[i]=cont;
                }
             }
-            txtResultado.append("El numero:"+v[i]+"Se repite:"+cont+"veces"+"\n");
         }
-        
+        for (int  k = 0; k < v.length; k++) 
+        {   
+                if (0>v[k])
+                       {
+                           cont= v[k];
+                       }
+        }    
+        txtResultado.append("El numero que mas se repite es:"+cont);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
